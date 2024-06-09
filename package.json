@@ -27,6 +27,8 @@
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
     "docker:build": "docker build -t service-message .",
     "docker:run": "docker run -p 3000:3000 -d service-message",
+    "docker:tag": "docker tag service-message mayankraipure/service-message:latest",
+    "docker:push": "docker push mayankraipure/service-message:latest",
     "premigrate": "npm run build",
     "migrate": "node ./dist/migrate",
     "preopenapi-spec": "npm run build",
